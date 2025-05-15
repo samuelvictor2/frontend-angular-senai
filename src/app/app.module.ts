@@ -1,3 +1,4 @@
+
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -13,7 +14,7 @@ import { MatListModule } from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-//pegar http 
+//pegar http
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -41,6 +42,10 @@ import { FormaPagamentoCrudComponent } from './views/forma-pagamento-crud/forma-
 import { FormaPagamentoDeleteComponent } from './components/formaPagamento/forma-pagamento-delete/forma-pagamento-delete.component';
 import { FormaPagamentoCreateComponent } from './components/formaPagamento/forma-pagamento-create/forma-pagamento-create.component';
 import { FormaPagamentoUpdateComponent } from './components/formaPagamento/forma-pagamento-update/forma-pagamento-update.component';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+
 
 registerLocaleData(localePt)
 
@@ -67,8 +72,7 @@ registerLocaleData(localePt)
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    //precisamos declara os modulos de material importados
-    MatToolbarModule, 
+    MatToolbarModule,
     MatSidenavModule,
     MatListModule,
     MatCardModule,
@@ -80,7 +84,10 @@ registerLocaleData(localePt)
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatSelectModule,      
+    MatDatepickerModule,  
+    MatNativeDateModule
   ],
   providers: [{
     provide: LOCALE_ID,

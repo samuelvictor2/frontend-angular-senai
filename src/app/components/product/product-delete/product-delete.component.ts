@@ -8,7 +8,6 @@ import { ProductService } from '../product.service';
   templateUrl: './product-delete.component.html',
   styleUrls: ['./product-delete.component.css']
 })
-
 export class ProductDeleteComponent implements OnInit {
 
   product!: Product;
@@ -16,23 +15,41 @@ export class ProductDeleteComponent implements OnInit {
   constructor(
     private productService: ProductService, 
     private router: Router,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
     const proId = this.route.snapshot.paramMap.get('proId');
-    this.productService.readById(proId!).subscribe(product =>{
-      this.product = product
-    })
+    if (proId) {
+      this.productService.readById(proId).subscribe(
+        (product) => {
+          this.product = product;
+        },
+        (error) => {
+          this.productService.showMessage('Produto não encontrado!');
+          this.router.navigate(['/products']);
+        }
+      );
+    }
   }
 
   deleteProduct(): void {
-    this.productService.delete(this.product.proId!).subscribe(() =>{
-    this.productService.showMessage('Produto excluido com sucesso!')  
-    this.router.navigate(['/products'])
-    })
+    if (this.product.proId) {  // Verifica se proId não é undefined ou null
+      this.productService.delete(this.product.proId).subscribe(
+        () => {
+          this.productService.showMessage('Produto excluído com sucesso!');
+          this.router.navigate(['/products']);
+        },
+        (error) => {
+          this.productService.showMessage('Erro ao excluir produto!');
+        }
+      );
+    } else {
+      this.productService.showMessage('ID do produto inválido!');
+    }
   }
 
-  cancel(): void{
-    this.router.navigate(['/products'])
+  cancel(): void {
+    this.router.navigate(['/products']);
   }
 }

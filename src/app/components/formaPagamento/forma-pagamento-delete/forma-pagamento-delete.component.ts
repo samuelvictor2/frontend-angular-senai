@@ -28,7 +28,7 @@ export class FormaPagamentoDeleteComponent implements OnInit {
   }
 
   deleteFormaPagamento(): void {
-    if (this.formaPagamento.fpgId) {
+    if (this.formaPagamento?.fpgId) {
       this.formaPagamentoService.delete(this.formaPagamento.fpgId).subscribe(() => {
         this.formaPagamentoService.showMessage('Forma de pagamento excluída com sucesso!');
         this.router.navigate(['/fpagamentos']);
