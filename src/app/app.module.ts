@@ -1,4 +1,3 @@
-
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -45,6 +44,9 @@ import { FormaPagamentoUpdateComponent } from './components/formaPagamento/forma
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { FornecedorCrudComponent } from './views/fornecedor-crud/fornecedor-crud.component';
+import { FornecedorReadComponent } from './components/fornecedor/fornecedor-read/fornecedor-read.component';
+
 
 
 registerLocaleData(localePt)
@@ -66,7 +68,9 @@ registerLocaleData(localePt)
     FormaPagamentoCrudComponent,
     FormaPagamentoDeleteComponent,
     FormaPagamentoCreateComponent,
-    FormaPagamentoUpdateComponent
+    FormaPagamentoUpdateComponent,
+    FornecedorCrudComponent,
+    FornecedorReadComponent
   ],
   imports: [
     BrowserModule,
@@ -76,19 +80,19 @@ registerLocaleData(localePt)
     MatSidenavModule,
     MatListModule,
     MatCardModule,
-    MatButtonModule,
+    MatButtonModule, // Remover duplicata
     MatSnackBarModule,
     HttpClientModule,
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatTableModule,
+    MatTableModule, // Remover duplicata
     MatPaginatorModule,
     MatSortModule,
     MatSelectModule,      
     MatDatepickerModule,  
     MatNativeDateModule
-  ],
+],
   providers: [{
     provide: LOCALE_ID,
     useValue: 'pt-BR'

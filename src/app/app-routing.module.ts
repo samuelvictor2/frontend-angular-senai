@@ -9,8 +9,9 @@ import { FormaPagamentoCrudComponent } from './views/forma-pagamento-crud/forma-
 import { FormaPagamentoCreateComponent } from './components/formaPagamento/forma-pagamento-create/forma-pagamento-create.component';
 import { FormaPagamentoDeleteComponent } from './components/formaPagamento/forma-pagamento-delete/forma-pagamento-delete.component';
 import { FormaPagamentoUpdateComponent } from './components/formaPagamento/forma-pagamento-update/forma-pagamento-update.component';
+import { FornecedorReadComponent } from './components/fornecedor/fornecedor-read/fornecedor-read.component';
+import { FornecedorCrudComponent } from './views/fornecedor-crud/fornecedor-crud.component';
 
-//configuração para rotear entre as paginas na home
 const routes: Routes = [
   {
     path: "",
@@ -50,6 +51,14 @@ const routes: Routes = [
     path: "fpagamentos/update/:fpgId",
     component: FormaPagamentoUpdateComponent
   },
+  {
+    path: "fornecedores",
+    component: FornecedorCrudComponent
+  },
+  {
+    path: "fornecedores",
+    component: FornecedorReadComponent
+  }
 ];
 
 @NgModule({
