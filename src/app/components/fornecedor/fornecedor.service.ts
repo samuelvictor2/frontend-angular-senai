@@ -14,4 +14,8 @@ export class FornecedorService {
   getAll(): Observable<Fornecedor[]> {
     return this.http.get<Fornecedor[]>(this.baseUrl);
   }
+
+  create(fornecedor: Fornecedor): Observable<Fornecedor> {
+    return this.http.post<Fornecedor>(this.baseUrl, fornecedor);
+  }
 }

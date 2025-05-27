@@ -11,6 +11,7 @@ import { FormaPagamentoDeleteComponent } from './components/formaPagamento/forma
 import { FormaPagamentoUpdateComponent } from './components/formaPagamento/forma-pagamento-update/forma-pagamento-update.component';
 import { FornecedorReadComponent } from './components/fornecedor/fornecedor-read/fornecedor-read.component';
 import { FornecedorCrudComponent } from './views/fornecedor-crud/fornecedor-crud.component';
+import { FornecedorCreateComponent } from './components/fornecedor/fornecedor-create/fornecedor-create.component';
 
 const routes: Routes = [
   {
@@ -51,13 +52,15 @@ const routes: Routes = [
     path: "fpagamentos/update/:fpgId",
     component: FormaPagamentoUpdateComponent
   },
+
   {
-    path: "fornecedores",
-    component: FornecedorCrudComponent
+  path: "fornecedores",
+  component: FornecedorReadComponent
   },
+  
   {
-    path: "fornecedores",
-    component: FornecedorReadComponent
+  path: "fornecedores/create",
+  component: FornecedorCreateComponent
   }
 ];
 

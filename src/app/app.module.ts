@@ -46,6 +46,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { FornecedorCrudComponent } from './views/fornecedor-crud/fornecedor-crud.component';
 import { FornecedorReadComponent } from './components/fornecedor/fornecedor-read/fornecedor-read.component';
+import { FornecedorCreateComponent } from './components/fornecedor/fornecedor-create/fornecedor-create.component';
 
 
 
@@ -70,7 +71,8 @@ registerLocaleData(localePt)
     FormaPagamentoCreateComponent,
     FormaPagamentoUpdateComponent,
     FornecedorCrudComponent,
-    FornecedorReadComponent
+    FornecedorReadComponent,
+    FornecedorCreateComponent
   ],
   imports: [
     BrowserModule,
