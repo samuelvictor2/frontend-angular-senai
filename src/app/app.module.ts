@@ -47,6 +47,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { FornecedorCrudComponent } from './views/fornecedor-crud/fornecedor-crud.component';
 import { FornecedorReadComponent } from './components/fornecedor/fornecedor-read/fornecedor-read.component';
 import { FornecedorCreateComponent } from './components/fornecedor/fornecedor-create/fornecedor-create.component';
+import { FornecedorUpdateComponent } from './components/fornecedor/fornecedor-update/fornecedor-update.component';
 
 
 
@@ -72,7 +73,8 @@ registerLocaleData(localePt)
     FormaPagamentoUpdateComponent,
     FornecedorCrudComponent,
     FornecedorReadComponent,
-    FornecedorCreateComponent
+    FornecedorCreateComponent,
+    FornecedorUpdateComponent
   ],
   imports: [
     BrowserModule,

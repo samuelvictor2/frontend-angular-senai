@@ -12,6 +12,7 @@ import { FormaPagamentoUpdateComponent } from './components/formaPagamento/forma
 import { FornecedorReadComponent } from './components/fornecedor/fornecedor-read/fornecedor-read.component';
 import { FornecedorCrudComponent } from './views/fornecedor-crud/fornecedor-crud.component';
 import { FornecedorCreateComponent } from './components/fornecedor/fornecedor-create/fornecedor-create.component';
+import { FornecedorUpdateComponent } from './components/fornecedor/fornecedor-update/fornecedor-update.component';
 
 const routes: Routes = [
   {
@@ -60,7 +61,12 @@ const routes: Routes = [
     {
       path: "fornecedores/create",
       component: FornecedorCreateComponent
+    },
+    {
+    path: "fornecedores/update/:forId",
+    component: FornecedorUpdateComponent
     }
+
 ];
 
 @NgModule({
