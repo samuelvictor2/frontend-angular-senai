@@ -52,16 +52,15 @@ const routes: Routes = [
     path: "fpagamentos/update/:fpgId",
     component: FormaPagamentoUpdateComponent
   },
-
-  {
-  path: "fornecedores",
-  component: FornecedorReadComponent
-  },
   
-  {
-  path: "fornecedores/create",
-  component: FornecedorCreateComponent
-  }
+    {
+      path: "fornecedores",
+      component: FornecedorReadComponent
+    },
+    {
+      path: "fornecedores/create",
+      component: FornecedorCreateComponent
+    }
 ];
 
 @NgModule({
