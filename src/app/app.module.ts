@@ -48,6 +48,7 @@ import { FornecedorCrudComponent } from './views/fornecedor-crud/fornecedor-crud
 import { FornecedorReadComponent } from './components/fornecedor/fornecedor-read/fornecedor-read.component';
 import { FornecedorCreateComponent } from './components/fornecedor/fornecedor-create/fornecedor-create.component';
 import { FornecedorUpdateComponent } from './components/fornecedor/fornecedor-update/fornecedor-update.component';
+import { FornecedorDeleteComponent } from './components/fornecedor/fornecedor-delete/fornecedor-delete.component';
 
 
 
@@ -74,7 +75,8 @@ registerLocaleData(localePt)
     FornecedorCrudComponent,
     FornecedorReadComponent,
     FornecedorCreateComponent,
-    FornecedorUpdateComponent
+    FornecedorUpdateComponent,
+    FornecedorDeleteComponent
   ],
   imports: [
     BrowserModule,

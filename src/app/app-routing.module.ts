@@ -13,6 +13,7 @@ import { FornecedorReadComponent } from './components/fornecedor/fornecedor-read
 import { FornecedorCrudComponent } from './views/fornecedor-crud/fornecedor-crud.component';
 import { FornecedorCreateComponent } from './components/fornecedor/fornecedor-create/fornecedor-create.component';
 import { FornecedorUpdateComponent } from './components/fornecedor/fornecedor-update/fornecedor-update.component';
+import { FornecedorDeleteComponent } from './components/fornecedor/fornecedor-delete/fornecedor-delete.component';
 
 const routes: Routes = [
   {
@@ -65,6 +66,10 @@ const routes: Routes = [
     {
     path: "fornecedores/update/:forId",
     component: FornecedorUpdateComponent
+    },
+    {
+    path: "fornecedores/delete/:forId",
+    component: FornecedorDeleteComponent
     }
 
 ];
