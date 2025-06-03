@@ -23,6 +23,8 @@ import { ContatoReadComponent } from './components/contato/contato-read/contato-
 import { ContatoCreateComponent } from './components/contato/contato-create/contato-create.component';
 import { ContatoUpdateComponent } from './components/contato/contato-update/contato-update.component';
 import { ContatoDeleteComponent } from './components/contato/contato-delete/contato-delete.component';
+import { EnderecoReadComponent } from './components/endereco/endereco-read/endereco-read.component';
+import { EnderecoCreateComponent } from './components/endereco/endereco-create/endereco-create.component';
 
 const routes: Routes = [
   {
@@ -114,8 +116,15 @@ const routes: Routes = [
   {
   path: 'contatos/update',
   component: ContatoUpdateComponent
+  },
+  {
+  path: 'enderecos',
+  component: EnderecoReadComponent
+  },
+   {
+  path: 'enderecos/create',
+  component: EnderecoCreateComponent
   }
-
 
 ];
 

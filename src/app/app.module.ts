@@ -60,6 +60,8 @@ import { ContatoCreateComponent } from './components/contato/contato-create/cont
 import { ContatoDeleteComponent } from './components/contato/contato-delete/contato-delete.component';
 import { ContatoUpdateComponent } from './components/contato/contato-update/contato-update.component';
 import { EnderecoCrudComponent } from './views/endereco-crud/endereco-crud.component';
+import { EnderecoReadComponent } from './components/endereco/endereco-read/endereco-read.component';
+import { EnderecoCreateComponent } from './components/endereco/endereco-create/endereco-create.component';
 
 
 
@@ -98,7 +100,9 @@ registerLocaleData(localePt)
     ContatoCreateComponent,
     ContatoDeleteComponent,
     ContatoUpdateComponent,
-    EnderecoCrudComponent
+    EnderecoCrudComponent,
+    EnderecoReadComponent,
+    EnderecoCreateComponent
   ],
   imports: [
     BrowserModule,
