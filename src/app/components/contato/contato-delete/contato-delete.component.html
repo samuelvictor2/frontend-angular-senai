@@ -1,0 +1,7 @@
+<mat-card>
+  <mat-card-title>Excluir Contato</mat-card-title>
+  <p>Tem certeza que deseja excluir o contato com email: <strong>{{ contato.conEmail }}</strong>?</p>
+
+  <button mat-raised-button color="warn" (click)="deleteContato()">Excluir</button>
+  <button mat-raised-button (click)="cancel()">Cancelar</button>
+</mat-card>

@@ -19,6 +19,10 @@ import { ClienteReadComponent } from './components/cliente/cliente-read/cliente-
 import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
+import { ContatoReadComponent } from './components/contato/contato-read/contato-read.component';
+import { ContatoCreateComponent } from './components/contato/contato-create/contato-create.component';
+import { ContatoUpdateComponent } from './components/contato/contato-update/contato-update.component';
+import { ContatoDeleteComponent } from './components/contato/contato-delete/contato-delete.component';
 
 const routes: Routes = [
   {
@@ -95,7 +99,23 @@ const routes: Routes = [
   {
   path: 'clientes/delete/:cliId',
   component: ClienteDeleteComponent
+  },
+  { path: 'contatos', 
+    component: ContatoReadComponent 
+  },
+  {
+  path: 'contatos/create',
+  component: ContatoCreateComponent
+  },
+  {
+  path: 'contatos/delete',
+  component: ContatoDeleteComponent
+  },
+  {
+  path: 'contatos/update',
+  component: ContatoUpdateComponent
   }
+
 
 ];
 

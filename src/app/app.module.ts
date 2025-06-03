@@ -54,6 +54,12 @@ import { ClienteReadComponent } from './components/cliente/cliente-read/cliente-
 import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
+import { ContatoCrudComponent } from './views/contato-crud/contato-crud.component';
+import { ContatoReadComponent } from './components/contato/contato-read/contato-read.component';
+import { ContatoCreateComponent } from './components/contato/contato-create/contato-create.component';
+import { ContatoDeleteComponent } from './components/contato/contato-delete/contato-delete.component';
+import { ContatoUpdateComponent } from './components/contato/contato-update/contato-update.component';
+import { EnderecoCrudComponent } from './views/endereco-crud/endereco-crud.component';
 
 
 
@@ -86,7 +92,13 @@ registerLocaleData(localePt)
     ClienteReadComponent,
     ClienteCreateComponent,
     ClienteUpdateComponent,
-    ClienteDeleteComponent
+    ClienteDeleteComponent,
+    ContatoCrudComponent,
+    ContatoReadComponent,
+    ContatoCreateComponent,
+    ContatoDeleteComponent,
+    ContatoUpdateComponent,
+    EnderecoCrudComponent
   ],
   imports: [
     BrowserModule,
