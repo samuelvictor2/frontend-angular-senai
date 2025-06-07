@@ -1,0 +1,33 @@
+<mat-card>
+    <mat-card-title>Excluir Endereço</mat-card-title>
+    <form>
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Rua" [value]="endereco.endRua" name="endRua" disabled>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Número" [value]="endereco.endNumero" name="endNumero" disabled>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Cidade" [value]="endereco.endCidade" name="endCidade" disabled>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="CEP" [value]="endereco.endCep" name="endCep" disabled>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Estado" [value]="endereco.endEstado" name="endEstado" disabled>
+      </mat-form-field>
+    </form>
+  
+    <button mat-raised-button color="warn" (click)="deleteEndereco()">
+      Excluir
+    </button>
+  
+    <button mat-raised-button (click)="cancel()">
+      Cancelar
+    </button>
+  </mat-card>
+  

@@ -63,6 +63,7 @@ import { EnderecoCrudComponent } from './views/endereco-crud/endereco-crud.compo
 import { EnderecoReadComponent } from './components/endereco/endereco-read/endereco-read.component';
 import { EnderecoCreateComponent } from './components/endereco/endereco-create/endereco-create.component';
 import { EnderecoUpdateComponent } from './components/endereco/endereco-update/endereco-update.component';
+import { EnderecoDeleteComponent } from './components/endereco/endereco-delete/endereco-delete.component';
 
 
 
@@ -105,6 +106,7 @@ registerLocaleData(localePt)
     EnderecoReadComponent,
     EnderecoCreateComponent,
     EnderecoUpdateComponent,
+    EnderecoDeleteComponent,
   ],
   imports: [
     BrowserModule,
