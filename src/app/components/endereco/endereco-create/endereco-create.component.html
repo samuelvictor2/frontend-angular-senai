@@ -1,33 +1,38 @@
 <mat-card>
   <mat-card-title>Novo Endereço</mat-card-title>
   
-  <form>
+  <form (ngSubmit)="createEndereco()" #enderecoForm="ngForm">
     <mat-form-field>
-      <input matInput placeholder="Rua" [(ngModel)]="endereco.endRua" name="endRua" required maxlength="150">
+      <input matInput placeholder="Rua" [(ngModel)]="endereco.endRua" name="endRua" required maxlength="150" #endRua="ngModel">
+      <mat-error *ngIf="endRua.invalid && endRua.touched">Rua é obrigatória e deve ter até 150 caracteres</mat-error>
     </mat-form-field>
 
     <mat-form-field>
-      <input matInput placeholder="Número" [(ngModel)]="endereco.endNumero" name="endNumero" required maxlength="5">
+      <input matInput placeholder="Número" [(ngModel)]="endereco.endNumero" name="endNumero" required maxlength="5" #endNumero="ngModel">
+      <mat-error *ngIf="endNumero.invalid && endNumero.touched">Número é obrigatório e deve ter até 5 caracteres</mat-error>
     </mat-form-field>
 
     <mat-form-field>
-      <input matInput placeholder="Cidade" [(ngModel)]="endereco.endCidade" name="endCidade" required maxlength="100">
+      <input matInput placeholder="Cidade" [(ngModel)]="endereco.endCidade" name="endCidade" required maxlength="100" #endCidade="ngModel">
+      <mat-error *ngIf="endCidade.invalid && endCidade.touched">Cidade é obrigatória e deve ter até 100 caracteres</mat-error>
     </mat-form-field>
 
     <mat-form-field>
-      <input matInput placeholder="CEP" [(ngModel)]="endereco.endCep" name="endCep" required maxlength="8">
+      <input matInput placeholder="CEP" [(ngModel)]="endereco.endCep" name="endCep" required maxlength="8" #endCep="ngModel">
+      <mat-error *ngIf="endCep.invalid && endCep.touched">CEP é obrigatório e deve ter até 8 caracteres</mat-error>
     </mat-form-field>
 
     <mat-form-field>
-      <input matInput placeholder="Estado" [(ngModel)]="endereco.endEstado" name="endEstado" required maxlength="2">
+      <input matInput placeholder="Estado" [(ngModel)]="endereco.endEstado" name="endEstado" required maxlength="2" #endEstado="ngModel">
+      <mat-error *ngIf="endEstado.invalid && endEstado.touched">Estado é obrigatório e deve ter até 2 caracteres</mat-error>
     </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="enderecoForm.invalid">
+      Salvar
+    </button>
+
+    <button mat-raised-button type="button" (click)="cancel()">
+      Cancelar
+    </button>
   </form>
-
-  <button mat-raised-button color="primary" (click)="createEndereco()">
-    Salvar
-  </button>
-
-  <button mat-raised-button (click)="cancel()">
-    Cancelar
-  </button>
 </mat-card>

@@ -27,10 +27,19 @@ export class EnderecoCreateComponent implements OnInit {
   ngOnInit(): void {}
 
   createEndereco(): void {
-    this.enderecoService.create(this.endereco).subscribe(() => {
-      this.router.navigate(['/enderecos']);
+    console.log('Endereço a ser criado:', this.endereco);
+    this.enderecoService.create(this.endereco).subscribe({
+      next: () => {
+        this.enderecoService.showMessage('Endereço criado com sucesso!');
+        this.router.navigate(['/enderecos']);
+      },
+      error: (err) => {
+        console.error('Erro ao criar endereço:', err);
+        this.enderecoService.showMessage('Erro ao criar endereço.', true);
+      }
     });
   }
+  
 
   cancel(): void {
     this.router.navigate(['/enderecos']);

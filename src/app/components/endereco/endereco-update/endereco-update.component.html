@@ -1,0 +1,33 @@
+<mat-card>
+    <mat-card-title>Alterar Endereço</mat-card-title>
+    <form>
+      <mat-form-field appearance="fill">
+        <mat-label>Rua</mat-label>
+        <input matInput [(ngModel)]="endereco.endRua" name="endRua" required maxlength="150">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Número</mat-label>
+        <input matInput [(ngModel)]="endereco.endNumero" name="endNumero" required maxlength="5">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Cidade</mat-label>
+        <input matInput [(ngModel)]="endereco.endCidade" name="endCidade" required maxlength="100">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>CEP</mat-label>
+        <input matInput [(ngModel)]="endereco.endCep" name="endCep" required maxlength="8">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Estado</mat-label>
+        <input matInput [(ngModel)]="endereco.endEstado" name="endEstado" required maxlength="2">
+      </mat-form-field>
+    </form>
+  
+    <button mat-raised-button color="primary" (click)="updateEndereco()">Atualizar</button>
+    <button mat-raised-button (click)="cancel()">Cancelar</button>
+  </mat-card>
+  
