@@ -54,17 +54,10 @@ import { ClienteReadComponent } from './components/cliente/cliente-read/cliente-
 import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
-import { ContatoCrudComponent } from './views/contato-crud/contato-crud.component';
-import { ContatoReadComponent } from './components/contato/contato-read/contato-read.component';
-import { ContatoCreateComponent } from './components/contato/contato-create/contato-create.component';
-import { ContatoDeleteComponent } from './components/contato/contato-delete/contato-delete.component';
-import { ContatoUpdateComponent } from './components/contato/contato-update/contato-update.component';
-import { EnderecoCrudComponent } from './views/endereco-crud/endereco-crud.component';
-import { EnderecoReadComponent } from './components/endereco/endereco-read/endereco-read.component';
-import { EnderecoCreateComponent } from './components/endereco/endereco-create/endereco-create.component';
-import { EnderecoUpdateComponent } from './components/endereco/endereco-update/endereco-update.component';
-import { EnderecoDeleteComponent } from './components/endereco/endereco-delete/endereco-delete.component';
 import { LoginComponent } from './views/login/login.component';
+import { VendaCreateComponent } from './components/venda/venda-create/venda-create.component';
+import { VendaCrudComponent } from './views/venda-crud/venda-crud.component';
+import { VendaReadComponent } from './components/venda/venda-read/venda-read.component';
 
 
 
@@ -98,17 +91,10 @@ registerLocaleData(localePt)
     ClienteCreateComponent,
     ClienteUpdateComponent,
     ClienteDeleteComponent,
-    ContatoCrudComponent,
-    ContatoReadComponent,
-    ContatoCreateComponent,
-    ContatoDeleteComponent,
-    ContatoUpdateComponent,
-    EnderecoCrudComponent,
-    EnderecoReadComponent,
-    EnderecoCreateComponent,
-    EnderecoUpdateComponent,
-    EnderecoDeleteComponent,
     LoginComponent,
+    VendaCreateComponent,
+    VendaCrudComponent,
+    VendaReadComponent,
   ],
   imports: [
     BrowserModule,

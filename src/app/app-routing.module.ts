@@ -21,14 +21,8 @@ import { ClienteReadComponent } from './components/cliente/cliente-read/cliente-
 import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
-import { ContatoReadComponent } from './components/contato/contato-read/contato-read.component';
-import { ContatoCreateComponent } from './components/contato/contato-create/contato-create.component';
-import { ContatoUpdateComponent } from './components/contato/contato-update/contato-update.component';
-import { ContatoDeleteComponent } from './components/contato/contato-delete/contato-delete.component';
-import { EnderecoReadComponent } from './components/endereco/endereco-read/endereco-read.component';
-import { EnderecoCreateComponent } from './components/endereco/endereco-create/endereco-create.component';
-import { EnderecoUpdateComponent } from './components/endereco/endereco-update/endereco-update.component';
-import { EnderecoDeleteComponent } from './components/endereco/endereco-delete/endereco-delete.component';
+import { VendaCreateComponent } from './components/venda/venda-create/venda-create.component';
+import { VendaCrudComponent } from './views/venda-crud/venda-crud.component';
 
 const routes: Routes = [
   // ✅ Rota de login e redirecionamento padrão
@@ -57,15 +51,8 @@ const routes: Routes = [
   { path: 'clientes/update/:cliId', component: ClienteUpdateComponent },
   { path: 'clientes/delete/:cliId', component: ClienteDeleteComponent },
 
-  { path: 'contatos', component: ContatoReadComponent },
-  { path: 'contatos/create', component: ContatoCreateComponent },
-  { path: 'contatos/delete', component: ContatoDeleteComponent },
-  { path: 'contatos/update', component: ContatoUpdateComponent },
-
-  { path: 'enderecos', component: EnderecoReadComponent },
-  { path: 'enderecos/create', component: EnderecoCreateComponent },
-  { path: 'enderecos/update/:endId', component: EnderecoUpdateComponent },
-  { path: 'enderecos/delete/:endId', component: EnderecoDeleteComponent }
+  { path: 'vendas', component: VendaCrudComponent },
+  { path: 'vendas/create', component: VendaCreateComponent }, // Adicionando a rota de criação de venda
 ];
 
 @NgModule({
